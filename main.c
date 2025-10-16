@@ -3,16 +3,14 @@
 
 int main(void)
 {
-  int flag = 1;
-  int y;
+  int i;
   
-  while(flag != 0)
+  for(i=0; i<5; i++)
   {
-		//int y;
-		y = 3;
-		flag = 0;
-  }
-  y = 4;
+		int temp =1; // lifetime start
+		printf("temp = %d\n", temp);
+		temp++; // litetime end
+	}
   
   system("PAUSE");	
   return 0;
