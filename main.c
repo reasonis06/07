@@ -1,50 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void f(void); // global function declare
+void sub(void); // function declare
 
 int main(void)
 {
 	int i; // local variable
-	for(i=0; i<5; i++)
-	{
-		f();
-	}
+	
+	for(i=0; i<3; i++)
+		sub();
 	
 	system("PAUSE");
 	return 0;
 }
 
-void f(void) // funtion definiton
+void sub(void) // funtion definiton
 {
-	int i; // local variable
-	for(i=0; i<10; i++)
-	{
-		printf("#");
-	}
-}
-
-/*
-void f(void); // global function declare
-
-int i; // global variable
-
-int main(void)
-{
-	for(i=0; i<5; i++)
-	{
-		f();
-	}
+	int auto_count=0; // automatic allocation
+	static int static_count=0; // static allocation
 	
-	system("PAUSE");
-	return 0;
+	auto_count++;
+	static_count++;
+	
+	printf("auto_count = %d\n", auto_count);
+	printf("static_count = %d\n", static_count);
 }
 
-void f(void) // funtion definiton
-{
-	for(i=0; i<10; i++)
-	{
-		printf("#");
-	}
-}
-*/
