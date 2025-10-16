@@ -1,42 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int inc(int counter); // funtion declare
+void f(void); // global function declare
 
 int main(void)
 {
-	int i=10;
-	printf("before function call: i=%d\n", i);
-	i = inc(i);
-	printf("after function call: i=%d\n", i);
+	int i; // local variable
+	for(i=0; i<5; i++)
+	{
+		f();
+	}
 	
 	system("PAUSE");
 	return 0;
 }
-	
-int inc(int counter) // funtion definiton
+
+void f(void) // funtion definiton
 {
-	counter++;
-	return counter;
+	int i; // local variable
+	for(i=0; i<10; i++)
+	{
+		printf("#");
+	}
 }
 
 /*
-int inc(int counter); // funtion declare
+void f(void); // global function declare
+
+int i; // global variable
 
 int main(void)
 {
-	int i=10;
-	printf("before function call: i=%d\n", i);
-	inc(i);
-	printf("after function call: i=%d\n", i);
+	for(i=0; i<5; i++)
+	{
+		f();
+	}
 	
 	system("PAUSE");
 	return 0;
 }
-	
-int inc(int counter)
+
+void f(void) // funtion definiton
 {
-	counter++;
-	return counter;
+	for(i=0; i<10; i++)
+	{
+		printf("#");
+	}
 }
 */
