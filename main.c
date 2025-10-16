@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int all_files; // global variable
+static int all_files; // global variable
 
 extern void sub();
 
